@@ -4,23 +4,22 @@ Group::Application.routes.draw do
   ActiveAdmin.routes(self)
 
 
-  scope '(:locale)' do
-    resources :posts
-    resources :contacts
+  resources :posts
+  resources :contacts
 
-    root 'posts#home'
-    get "/home" => "posts#home"
-    get "/contact" => "contacts#new"
+  root 'posts#home'
+  get "/home" => "posts#home"
+  get "/contact" => "contacts#new"
 
     # static pages
-    get "/investment" => "contents#investment"
-    get "/partner-with-us" => "contents#partner", as: "partner"
-    get "/our-companies" => "contents#companies", as: "companies"
+    get "/web-development" => "contents#webdevelopment", as: "webdevelopment"
+    get "/marketing" => "contents#marketing"
+    get "/video" => "contents#video"
+    get "/other-services" => "contents#otherservices", as: "otherservices"
     get "/site-map" => "contents#sitemap", as: "sitemap"
     get "/terms-and-conditions" => "contents#terms", as: "terms"
     get "/privacy" => "contents#privacy"
 
-  end
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -12,14 +12,14 @@
 
 	<header class="container">
 		<div class="row">
-			<h1 class="three columns">
+			<h1 id="top" class="three columns">
 				<%= link_to(root_path) do %>
 				<%= image_tag "logo_psm.png" %>
 				<% end %>
 			</h1>
 
 			<div class="four columns">
-				<h2><%= t('.slogan') %></h2>
+				<h2>Putting your ideas in Movement</h2>
 			</div>
 
 			<div class="five columns header_right_side">
@@ -29,18 +29,8 @@
 					<i class="fa fa-phone fa-stack-1x fa-inverse"></i>
 					</span> 0207 247 1440</phone>
 					<div>
-					<!--  
-					<div id="languages">
-						
-						<%= form_tag home_path, class: 'locale', :method => :get do %>
-							<%= select_tag 'set_locale',
-								options_for_select(LANGUAGES, I18n.locale.to_s),
-								onchange: 'this.form.submit()' %>
-							<%= submit_tag 'submit' %>
-							<%= javascript_tag "$('.locale input').hide()" %>
-						<% end %>
-					</div>
-					.languages -->
+
+
 					</div>
 					<div class="stay-in-touch-icons">
 						<a class="twitter" href="http://www.twitter.com/" target="_blank" title="Follow us on Twitter">Follow us on Twitter</a>
@@ -57,13 +47,13 @@
 
 		<nav class="row">
 			<ul id="menu">
-				<li><%= link_to t('.home'), home_path, class: "first" %></li>
-				<li><a href="#">WEB DEVELOPMENT</a></li>
-				<li><a href="#">MARKETING</a></li>
-				<li><a href="#">VIDEO EDITING</a></li>
-				<li><a href="#">OTHER SERVICES</a></li>
-				<li><%= link_to "BLOG", posts_path %></li>
-				<li><%= link_to t('.contact'), new_contact_path, class: "last" %></li>
+				<li><%= active_link_to "HOME", home_path, class: "first" %></li>
+				<li><%= active_link_to "WEB DEVELOPMENT", webdevelopment_path, class: "link" %></li>
+				<li><%= active_link_to "MARKETING", marketing_path, class: "link" %></li>
+				<li><%= active_link_to "VIDEO EDITING", video_path, class: "link" %></li>
+				<li><%= active_link_to "OTHER SERVICES", otherservices_path, class: "link" %></li>
+				<li><%= active_link_to "BLOG", posts_path, class: "link" %></li>
+				<li><%= active_link_to "CONTACT", new_contact_path, class: "last" %></li>
 			</ul>
 		</nav> <!--  .row -->
 
@@ -79,6 +69,10 @@
 			<article class="row">
 				<%= yield %>
 			</article>
+
+			<p id="back-top">
+				<a href="#top"><span></span>Back to top</a>
+			</p>
 
 			<footer>
 				<div class="row">
@@ -98,13 +92,13 @@
 
 				<nav class="row">
 					<ul id="menu">
-						<li><%= link_to t('.home'), home_path, class: "first" %></li>
-						<li><a href="#">WEB DEVELOPMENT</a></li>
-						<li><a href="#">MARKETING</a></li>
-						<li><a href="#">VIDEO EDITING</a></li>
-						<li><a href="#">OTHER SERVICES</a></li>
-						<li><%= link_to "BLOG", posts_path %></li>
-						<li><%= link_to t('.contact'), new_contact_path, class: "last" %></li>
+						<li><%= active_link_to "HOME", home_path, class: "first" %></li>
+						<li><%= active_link_to "WEB DEVELOPMENT", webdevelopment_path, class: "link" %></li>
+						<li><%= active_link_to "MARKETING", marketing_path, class: "link" %></li>
+						<li><%= active_link_to "VIDEO EDITING", video_path, class: "link" %></li>
+						<li><%= active_link_to "OTHER SERVICES", otherservices_path, class: "link" %></li>
+						<li><%= active_link_to "BLOG", posts_path, class: "link" %></li>
+						<li><%= active_link_to "CONTACT", new_contact_path, class: "last" %></li>
 					</ul>
 				</nav> <!--  #main_nav --> <!--  .row -->
 
