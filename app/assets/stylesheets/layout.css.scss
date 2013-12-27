@@ -8,7 +8,7 @@ $bgColour: #ffffff;
 $fontLato: 'Lato', sans-serif;
 
 body {
-  background: #e6e6e6  url(image_path('body_background.jpg')) repeat-x top;
+  background: #e6e6e6 url(image_path('body_background.jpg')) repeat-x top;
   font-family: $fontLato;
   font-size: 1em;
   font-weight: 300;
@@ -314,7 +314,7 @@ background: -o-linear-gradient($secondaryColour, #000); /* For Opera 11.1 to 12.
 background: -moz-linear-gradient($secondaryColour, #000); /* For Firefox 3.6 to 15 */
 background: -ms-linear-gradient($secondaryColour, #000);
 background: linear-gradient($secondaryColour, #000); /* Standard syntax */
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#009fe3', endColorstr='#000');
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$secondaryColour}', endColorstr='#000');
 zoom: 1;
 border-bottom: 1px solid $primaryColour;
 }
@@ -345,18 +345,21 @@ nav a {
   margin-top: 10px;
 }
 
-.stay-in-touch-icons > a {
-  background: url(image_path('follow-us-icons.png')) no-repeat 0 0 transparent;
-  height: 30px;
-  width: 30px;
-  display: inline-block;
-  text-align: left;
-  text-indent: -10000px;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  transition: none; 
-  margin: 0 10px 0 0; 
+.stay-in-touch-icons {
+  padding: 20px 0;
+  a {
+    background: url(image_path('follow-us-icons.png')) no-repeat 0 0 transparent;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    text-align: left;
+    text-indent: -10000px;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none; 
+    margin: 0 10px 0 0;
+  }
 }
 .stay-in-touch-icons > .twitter:hover {
   background-position: 0 -30px;
@@ -429,20 +432,30 @@ margin-top: -20px;
   }
 }
 
-.courses, .memberships {
-  h2, hr {
-    margin: 15px;
+.webdevelopment {
+  img {
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #d60b51 0%, Violet 100%, Thistle 95%);
+    background-image: -webkit-radial-gradient(45px 45px, circle cover, #d60b51, Violet);
+    background-image: radial-gradient(45px 45px 45deg, circle cover, #d60b51 0%, Violet 100%, Thistle 95%);
+    
+    animation-name: spin; 
+    animation-duration: 21s; /* 3 seconds */
+    animation-iteration-count: infinite; 
+    animation-timing-function: linear;
+  }
+  .standardfeat {
+    font-size: 0.8em;
   }
 }
-.memberships h4 {
-  margin: 20px;
+.header_image {
+  background-color: $secondaryColour;
 }
-
-.course, .member {
-  padding: 13px;
-}
-.chooseus .row .columns{
-  padding-left: 10px;
+.side_image {
+  float: right;
+  margin-right: -10px;
 }
 
 section.video_form {
@@ -453,7 +466,7 @@ background: -o-linear-gradient($primaryColour, $secondaryColour); /* For Opera 1
 background: -moz-linear-gradient($primaryColour, $secondaryColour); /* For Firefox 3.6 to 15 */
 background: -ms-linear-gradient($primaryColour, $secondaryColour);
 background: linear-gradient($primaryColour, $secondaryColour); /* Standard syntax */
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7e4e24', endColorstr='#421612');
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$primaryColour}', endColorstr='#{$secondaryColour}');
 zoom: 1;
 border-bottom: 8px solid $primaryColour;
 }
@@ -672,7 +685,7 @@ background: -o-linear-gradient($primaryColour, $secondaryColour); /* For Opera 1
 background: -moz-linear-gradient($primaryColour, $secondaryColour); /* For Firefox 3.6 to 15 */
 background: -ms-linear-gradient($primaryColour, $secondaryColour);
 background: linear-gradient($primaryColour, $secondaryColour); /* Standard syntax */
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7e4e24', endColorstr='#421612');
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$primaryColour}', endColorstr='#{$secondaryColour}');
 zoom: 1;
   h2, p {
     color: #ffffff;
@@ -852,13 +865,14 @@ ul#menu_footer {
   }
 
   nav li a:hover, nav li a.active, nav li a:focus {
+  background-image: none;
   background: -webkit-gradient(linear, left top, left bottom, from(#000), to($secondaryColour));
   background: -webkit-linear-gradient(#000, $secondaryColour); /* For Safari */
   background: -o-linear-gradient(#000, $secondaryColour); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(#000, $secondaryColour); /* For Firefox 3.6 to 15 */
   background: -ms-linear-gradient(#000, $secondaryColour);
   background: linear-gradient(#000, $secondaryColour); /* Standard syntax */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#009fe3');
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#{$secondaryColour}');
   zoom: 1;
   }
 }
@@ -894,7 +908,7 @@ ul#menu_footer {
   background: -moz-linear-gradient(#000, $secondaryColour); /* For Firefox 3.6 to 15 */
   background: -ms-linear-gradient(#000, $secondaryColour);
   background: linear-gradient(#000, $secondaryColour); /* Standard syntax */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#009fe3');
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#{$secondaryColour}');
   zoom: 1;
   }
   .header_right_side {
@@ -940,7 +954,7 @@ ul#menu_footer {
   background: -moz-linear-gradient(#000, $secondaryColour); /* For Firefox 3.6 to 15 */
   background: -ms-linear-gradient(#000, $secondaryColour);
   background: linear-gradient(#000, $secondaryColour); /* Standard syntax */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#009fe3');
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#{$secondaryColour}');
   zoom: 1;
   }
   .header_right_side {
@@ -983,7 +997,7 @@ ul#menu_footer {
   background: -moz-linear-gradient(#000, $secondaryColour); /* For Firefox 3.6 to 15 */
   background: -ms-linear-gradient(#000, $secondaryColour);
   background: linear-gradient(#000, $secondaryColour); /* Standard syntax */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#009fe3');
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#{$secondaryColour}');
   zoom: 1;
   }
   .header_right_side {
