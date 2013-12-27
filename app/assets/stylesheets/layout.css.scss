@@ -7,6 +7,17 @@ $secondaryColour: #d60b51;
 $bgColour: #ffffff;
 $fontLato: 'Lato', sans-serif;
 
+@mixin mainnav-hover($fromvalue, $tovalue) {
+  background: -webkit-gradient(linear, left top, left bottom, from($fromvalue), to($tovalue));
+  background: -webkit-linear-gradient($fromvalue, $tovalue); /* For Safari */
+  background: -o-linear-gradient($fromvalue, $tovalue); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($fromvalue, $tovalue); /* For Firefox 3.6 to 15 */
+  background: -ms-linear-gradient($fromvalue, $tovalue);
+  background: linear-gradient($fromvalue, $tovalue); /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$fromvalue}', endColorstr='#{$tovalue}');
+  zoom: 1;
+}
+
 body {
   background: #e6e6e6 url(image_path('body_background.jpg')) repeat-x top;
   font-family: $fontLato;
@@ -865,15 +876,7 @@ ul#menu_footer {
   }
 
   nav li a:hover, nav li a.active, nav li a:focus {
-  background-image: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(#000), to($secondaryColour));
-  background: -webkit-linear-gradient(#000, $secondaryColour); /* For Safari */
-  background: -o-linear-gradient(#000, $secondaryColour); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#000, $secondaryColour); /* For Firefox 3.6 to 15 */
-  background: -ms-linear-gradient(#000, $secondaryColour);
-  background: linear-gradient(#000, $secondaryColour); /* Standard syntax */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#{$secondaryColour}');
-  zoom: 1;
+  @include mainnav-hover(#000, #d60b51);
   }
 }
 
@@ -902,15 +905,9 @@ ul#menu_footer {
   }
 
   nav li a:hover, nav li a.active, nav li a:focus {
-  background: -webkit-gradient(linear, left top, left bottom, from(#000), to($secondaryColour));
-  background: -webkit-linear-gradient(#000, $secondaryColour); /* For Safari */
-  background: -o-linear-gradient(#000, $secondaryColour); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#000, $secondaryColour); /* For Firefox 3.6 to 15 */
-  background: -ms-linear-gradient(#000, $secondaryColour);
-  background: linear-gradient(#000, $secondaryColour); /* Standard syntax */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#{$secondaryColour}');
-  zoom: 1;
+  @include mainnav-hover(#000, #d60b51);
   }
+
   .header_right_side {
     padding-left: 80px; 
   }
@@ -948,15 +945,9 @@ ul#menu_footer {
   }
 
   nav li a:hover, nav li a.active, nav li a:focus {
-  background: -webkit-gradient(linear, left top, left bottom, from(#000), to($secondaryColour));
-  background: -webkit-linear-gradient(#000, $secondaryColour); /* For Safari */
-  background: -o-linear-gradient(#000, $secondaryColour); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#000, $secondaryColour); /* For Firefox 3.6 to 15 */
-  background: -ms-linear-gradient(#000, $secondaryColour);
-  background: linear-gradient(#000, $secondaryColour); /* Standard syntax */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#{$secondaryColour}');
-  zoom: 1;
+  @include mainnav-hover(#000, #d60b51);
   }
+
   .header_right_side {
     padding-left: 80px; 
   }
@@ -991,15 +982,9 @@ ul#menu_footer {
   }
 
   nav li a:hover, nav li a.active, nav li a:focus {
-  background: -webkit-gradient(linear, left top, left bottom, from(#000), to($secondaryColour));
-  background: -webkit-linear-gradient(#000, $secondaryColour); /* For Safari */
-  background: -o-linear-gradient(#000, $secondaryColour); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#000, $secondaryColour); /* For Firefox 3.6 to 15 */
-  background: -ms-linear-gradient(#000, $secondaryColour);
-  background: linear-gradient(#000, $secondaryColour); /* Standard syntax */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#{$secondaryColour}');
-  zoom: 1;
+  @include mainnav-hover(#000, #d60b51);
   }
+  
   .header_right_side {
     padding-left: 80px; 
   }
