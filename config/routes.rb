@@ -4,7 +4,6 @@ Group::Application.routes.draw do
   ActiveAdmin.routes(self)
 
 
-  scope '(:locale)' do
 
     resources :categories do
       resources :posts
@@ -27,7 +26,7 @@ Group::Application.routes.draw do
     get "/terms-and-conditions" => "contents#terms", as: "terms"
     get "/privacy" => "contents#privacy"
 
-  end
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

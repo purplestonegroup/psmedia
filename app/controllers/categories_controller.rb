@@ -15,13 +15,9 @@ class CategoriesController < ApplicationController
   end
 
   def home
-  	if params[:set_locale]
-  		redirect_to root_url(locale: params[:set_locale])
-  	else
       
       @posts = Post.order('created_at desc').limit(2)
 
-  	end
   end
 
 
