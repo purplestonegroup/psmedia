@@ -11,6 +11,9 @@ class ContentsController < ApplicationController
   def otherservices
   end
 
+  def portfolio
+  end
+
   def sitemap
   end
 
