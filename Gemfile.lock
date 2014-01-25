@@ -144,6 +144,7 @@ GEM
       actionpack (>= 3.0)
       activerecord (>= 3.0)
       polyamorous (~> 0.6.0)
+    rdiscount (2.1.7)
     rdoc (4.1.1)
       json (~> 1.4)
     responders (1.0.0)
@@ -203,6 +204,7 @@ DEPENDENCIES
   pg
   rails (= 4.0.1)
   rails_12factor
+  rdiscount
   sass-rails (~> 4.0.0)
   sdoc
   simple_form
