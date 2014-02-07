@@ -13,6 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.slicknav.min
-//= require jquery.bxslider.min
+//= require jquery.flexslider-min
 //= require least
 //= require_tree .

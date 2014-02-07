@@ -1,10 +1,13 @@
 $(document).ready(function(){
 	$('#menu').slicknav();
-	$('.bxslider').bxSlider({
-		auto: true,
-		autostart: true
-	});
 
+
+	$(window).load(function() {
+	  $('.flexslider').flexslider({
+	    animation: "slide"
+	  });
+	});
+	
 
 	// hide #back-top first
 	$("#back-top").hide();
