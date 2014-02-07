@@ -4,20 +4,27 @@
 
 	<div class="row">
 
+		<%= image_tag "girl_camera_purplestone.jpg", width: '400' %>
+
 		<div class="side_image">
 			<%= image_tag "video.png" %>
 		</div>
 
-		<%= image_tag "play.png", width: '100' %>
 		<br />
 		<br />
 		<h2><i class="fa fa-youtube"></i> Edition and Production Services</h2>
 		<hr class="light">
 		<br />
+		<%= image_tag "play.png", width: '100' %>
 		<p>If you need great video production for your website, social media, and email marketing campaigns with profesional quality, we have a staff of experienced, business-focused editors ready to transform your raw footage into a great final solution ready with the latest standards.</p>
 		<h5>How is the process?</h5>
 		<p>I.- You can send your video to us by the cloud system (Google Drive, Dropbox, WeTransfer, etc.), or shipping to us using the normal post services.</p>
 		<p>II.- You can select a video editing format from a number of video editing formats availables:</p>
+		
+		<div class="side_image">
+			<%= image_tag "video_editing_table_purplestone.jpg", width: '500' %>
+		</div>
+
 		<ol>
 			<li>3GPP Movie (.3gp)
 			<li>DV stream (.dv)</li>
@@ -34,7 +41,7 @@
 
 		<p>III.- When the process of editing your video is complete, we'll deliver the final product through the Cloud.</p>
 		
-		<%= active_link_to "Request a cuote", new_contact_path, class: "button" %>
+		<%= active_link_to "Request a quote", new_contact_path, class: "button" %>
 		
 	</div>
 
