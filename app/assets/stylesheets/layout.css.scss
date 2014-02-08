@@ -786,16 +786,17 @@ ul#menu_footer {
   .slicknav_menu {
     display:block;
   }
-  #slider { 
+  #slider {
+    ul.slides h2, ul.slides img {
+    float: left;
+    position: relative;
+    }
     h2 {
     font-size: 1.3em;
     width: 270px;
     }
     .transp {
     display: none;
-    }
-    img {
-    top: 200px;
     }
   }
   ul#menu_footer {
